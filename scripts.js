@@ -1,5 +1,5 @@
 var lienzo = document.getElementById("lienzo");
-var selectorColor = document.getElementsByClassName("color")
+var borrarTodo = document.getElementById("borrar")
 var dibujo = lienzo.getContext("2d");
 var alto = window.innerHeight - 50;
 var ancho = window.innerWidth - 50;
@@ -17,6 +17,8 @@ lienzo.setAttribute("width", ancho);
 window.addEventListener("resize", actualizarMedidas);
 lienzo.addEventListener("mousedown", iniciarTrazo);
 lienzo.addEventListener("mouseup", finalizarTrazo);
+
+borrarTodo.addEventListener("click", borrarCanvas);
 
 function cambiarColor(colorLapiz) {
     borrar = false;
@@ -73,4 +75,8 @@ function dibujar(color, xInicial, yInicial, xFinal, yFinal, dibujo) {
     dibujo.lineTo(xFinal, yFinal);
     dibujo.stroke();
     dibujo.closePath();
+}
+
+function borrarCanvas() {
+    dibujo.clearRect(0, 0, lienzo.width, lienzo.height);
 }

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>paint</title>
+    <title>paint malito</title>
 </head>
 
 <body>
@@ -14,7 +14,7 @@
 
     <div class="herramientas">
         <div class="color-lapiz">
-            <div id="black" class="color" onClick="cambiarColor('black')">
+            <div id="black" class="color seleccionado" onClick="cambiarColor('black')">
                 <svg>
                     <circle cx="13" cy="13" r="12" stroke="gray" fill="black" />
                 </svg>
@@ -69,11 +69,17 @@
                     <circle cx="13" cy="13" r="12" stroke="gray" fill="lightblue" />
                 </svg>
             </div>
-            <div id="white" class="color" onClick="cambiarColor('white')">
+            <div id="white" class="color white" onClick="cambiarColor('white')">
                 <svg>
                     <rect width="26" height="26" stroke="gray" fill="white" />
                 </svg>
             </div>
+        </div>
+
+        <div id="borrar" class="color borrar">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+                <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/>
+            </svg>
         </div>
     </div>
 

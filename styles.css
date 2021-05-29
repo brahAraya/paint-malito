@@ -24,6 +24,7 @@ svg {
 
 .herramientas {
     position: absolute;
+    position: fixed;
     left: 0;
 }
 
@@ -53,4 +54,17 @@ svg {
 .color.seleccionado {
     background-color: #addeff;
     border: #6ba9d3 1px solid;
+}
+
+.white {
+    border-bottom: none;
+}
+
+.borrar {
+    margin-top: 10px;
+    background-color: #eee;
+    border: #aaa 1px solid;
+    width: 52px;
+    height: 52px;
+    box-shadow: 0px 0px 10px #00000038;
 }
